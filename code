@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        calculator myCal = new calculator();
+
+        System.out.println("Enter First number");
+        int a = sc.nextInt();
+
+        System.out.println("Enter First number");
+        int b = sc.nextInt();
+
+        System.out.println("Please enter your choice");
+        System.out.println("Add -> 1");
+        System.out.println("Sub -> 2");
+        System.out.println("Mul -> 3");
+        System.out.println("div -> 4");
+
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            System.out.println(myCal.add(a, b));
+        }
+        else if (choice == 2) {
+            System.out.println(myCal.sub(a,b));
+
+        }
+
+        else if (choice == 3) {
+            System.out.println(myCal.mul(a,b));
+        }
+
+        else if (choice == 4) {
+            System.out.println(myCal.div(a,b));
+
+        }
+        sc.close();
+
+    }
+}
+
+//class has all the calculation
+
+
+
+public class calculator {
+
+    public int add(int a, int b){
+        return a+b;
+    }
+
+    public int sub(int a, int b){
+        return a-b;
+    }
+
+    public int mul(int a, int b){
+        return a*b;
+    }
+
+    public int div(int a, int b){
+        return a/b;
+    }
+
+
+}
+
+
+
+
+
